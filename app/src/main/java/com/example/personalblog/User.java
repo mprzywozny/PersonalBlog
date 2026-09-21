@@ -1,19 +1,20 @@
 package com.example.personalblog;
 
 public class User {
+    private String username;
     private String email;
-    private String password;
+    //private String password;
 
-    public User(String email, String password) {
+    public User(String username, String email) {
         this.email = email;
-        this.password = password;
+       // this.password = password;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public String getPassword() {
-        return password;
+    public String getUsername() {
+        return username;
     }
 }
