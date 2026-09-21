@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "913235879011",
+    "project_id": "personalblog-7aa99",
+    "storage_bucket": "personalblog-7aa99.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:913235879011:android:1578b05c75930030284456",
+        "android_client_info": {
+          "package_name": "com.example.personalblog"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzuCYhayJcKU1OwbiQzZyj298qYfgUaMo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
