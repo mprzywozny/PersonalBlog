@@ -74,6 +74,7 @@
                 />
 
             <EditText
+                android:id="@+id/emailInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
@@ -89,6 +90,7 @@
                 />
 
             <EditText
+                android:id="@+id/passwordInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
@@ -104,6 +106,7 @@
                 />
 
             <EditText
+                android:id="@+id/confirmPasswordInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
@@ -116,6 +119,7 @@
                 android:layout_height="25dp" />
 
             <Button
+                android:id="@+id/registerButton"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="REGISTER" />
@@ -128,6 +132,7 @@
                 />
 
             <Button
+                android:id="@+id/loginButton"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:text="LOGIN" />

@@ -26,9 +26,9 @@
             android:text="MY DIARY"
             android:textStyle="bold|italic"
             android:fontFamily="sans-serif-black"
-            android:textSize="50dp"
-            android:textColor="@color/black"
-            />
+            android:textSize="50sp"
+            android:textColor="@color/black" />
+
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
@@ -38,72 +38,80 @@
         app:cardCornerRadius="25dp"
         android:layout_marginBottom="-15dp">
 
-        
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="28dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Welcome!"
                 android:textColor="@color/black"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:textStyle="italic"
-                android:fontFamily="sans-serif-black"
-                />
+                android:fontFamily="sans-serif-black" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Please log in:"
-                android:alpha="0.6"
-                />
+                android:alpha="0.6" />
+
             <View
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"/>
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="EMAIL:"
-                android:alpha="0.6"
-                />
+                android:alpha="0.6" />
+
             <EditText
+                android:id="@+id/emailInput"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:inputType="textEmailAddress"
-                android:drawableEnd="@drawable/emaillogo"/>
+                android:drawableEnd="@drawable/emaillogo"
+                android:hint="Email" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="PASSWORD:"
-                android:alpha="0.6"
-                />
+                android:alpha="0.6" />
+
             <EditText
+                android:id="@+id/passwordInput"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:inputType="textPassword"
-                android:drawableEnd="@drawable/passicon"/>
+                android:drawableEnd="@drawable/passicon"
+                android:hint="Password" />
 
             <View
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"/>
-            
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
             <Button
+                android:id="@+id/loginButton"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="LOGIN"/>
+                android:text="LOGIN" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Don't have an account?"
-                android:alpha="0.6"
-                />
+                android:alpha="0.6" />
+
             <Button
+                android:id="@+id/registerButton"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="REGISTER"/>
-
+                android:text="REGISTER" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
