@@ -74,11 +74,7 @@ public class ProfilePage extends AppCompatActivity {
                     }
                 }
                 adapter.notifyDataSetChanged();
-                Toast.makeText(
-                        ProfilePage.this,
-                        "Posts found: " + postList.size(),
-                        Toast.LENGTH_LONG
-                ).show();
+                Toast.makeText(ProfilePage.this, "Posts loaded!", Toast.LENGTH_LONG).show();
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
