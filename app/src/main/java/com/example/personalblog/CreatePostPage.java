@@ -8,9 +8,6 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -55,13 +52,17 @@ public class CreatePostPage extends AppCompatActivity {
 
     }
 
-    private void writePost(String email, String content){
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference reference = database.getReference("posts").child(content);
+    private void writePost(String email, String content) {
+        FirebaseDatabase database = FirebaseDatabase.getInstance("https://personalblog-7aa99-default-rtdb.europe-west1.firebasedatabase.app");
+        DatabaseReference reference = database.getReference("posts").push();
         HashMap<String, Object> post = new HashMap<>();
         post.put("email", email);
         post.put("content", content);
         post.put("time", ServerValue.TIMESTAMP);
-        reference.push().setValue(post);
+        reference.setValue(post).addOnSuccessListener(unused -> {
+            Toast.makeText(this, "Posted!", Toast.LENGTH_LONG).show();postInput.setText("");
+        }).addOnFailureListener(e -> {Toast.makeText(this, "Failed: " + e.getMessage(), Toast.LENGTH_LONG).show();
+        });
     }
+
 }
