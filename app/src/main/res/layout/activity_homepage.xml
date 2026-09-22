@@ -1,10 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Homepage">
+    android:fillViewport="true"
+    android:background="@color/orange"
+    android:overScrollMode="never">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange"
+        tools:context=".Homepage">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="80dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/book_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MY DIARY"
+                android:textStyle="bold|italic"
+                android:fontFamily="sans-serif-black"
+                android:textSize="50dp"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="-15dp"
+            app:cardCornerRadius="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="28dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Welcome to your digital diary!"
+                    android:textColor="@color/black"
+                    android:textSize="25dp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.6"
+                    android:text="Pick one of the following options" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp" />
+
+                <Button
+                    android:id="@+id/createPostButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Create Post" />
+
+                <Button
+                    android:id="@+id/viewProfileButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="View your profile" />
+
+                <Button
+                    android:id="@+id/settingsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Settings" />
+
+                <Button
+                    android:id="@+id/signOutButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Sign Out" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</ScrollView>
